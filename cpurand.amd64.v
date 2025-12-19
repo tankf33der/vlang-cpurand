@@ -24,8 +24,9 @@ pub fn u32() u32 {
 		loop:
 		rdrand ecx
 		jnc loop
-		mov value ecx
-		; =r (value)
+		mov result
+		ecx
+		; =r (result)
 		; ; cc
 		  ecx
 	}
