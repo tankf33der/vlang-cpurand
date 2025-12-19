@@ -2,7 +2,7 @@ module cpurand
 
 pub fn support() bool {
 	mut result := false
-	asm amd64 {
+	asm i386 {
 		// op dst, src
 		mov eax, 1
 		cpuid
@@ -20,7 +20,7 @@ pub fn support() bool {
 
 pub fn u32() u32 {
 	mut result := u32(0)
-	asm amd64 {
+	asm i386 {
 		loop:
 		rdrand ecx
 		jnc loop
