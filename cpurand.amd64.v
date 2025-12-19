@@ -17,3 +17,17 @@ pub fn cpu_support() bool {
 	}
 	return result
 }
+
+pub fn u32() u32 {
+	mut result := u32(0)
+	asm amd64 {
+		loop:
+		rdrand ecx
+		jnc loop
+		mov value ecx
+		; =r (value)
+		; ; cc
+		  ecx
+	}
+	return result
+}
