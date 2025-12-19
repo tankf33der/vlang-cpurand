@@ -1,7 +1,7 @@
 Module {
 	name: 'cpurand'
 	description: 'get random data from CPU'
-	version: '0.0.4'
+	version: '0.0.5'
 	license: 'Unlicense'
 	dependencies: []
 }
