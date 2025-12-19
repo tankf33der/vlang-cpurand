@@ -1,6 +1,6 @@
 module cpurand
 
-pub fn cpu_support() bool {
+pub fn support() bool {
 	mut result := false
 	asm amd64 {
 		// op dst, src
